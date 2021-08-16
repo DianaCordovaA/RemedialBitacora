@@ -53,7 +53,7 @@ namespace ClassCapaLogicaNegocios
         public DataTable ObtenerGruposGrid(ref string msj_salida)
         {
 
-            string query = "select Id_grupo as Codigo, Grado, Letra as Letra_del_Grupo, extra as Extra from Grupo";
+            string query = "select Id_grupo as Codigo, Grado, Letra, extra as Extra from Grupo";
 
             DataSet ObtencionCarreras = null;
             DataTable Datos_salida = null;

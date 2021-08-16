@@ -71,6 +71,8 @@
     <Content Include="EdicionCuatri.aspx" />
     <Content Include="Edicion_PE.aspx" />
     <Content Include="Editar_Carrera.aspx" />
+    <Content Include="Editar_Grupo.aspx" />
+    <Content Include="Grupo.aspx" />
     <Content Include="Index.aspx" />
     <Content Include="ProgramasEducativos.aspx" />
     <Content Include="Web.config" />
@@ -105,6 +107,20 @@
     </Compile>
     <Compile Include="Editar_Carrera.aspx.designer.cs">
       <DependentUpon>Editar_Carrera.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Editar_Grupo.aspx.cs">
+      <DependentUpon>Editar_Grupo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Editar_Grupo.aspx.designer.cs">
+      <DependentUpon>Editar_Grupo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Grupo.aspx.cs">
+      <DependentUpon>Grupo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Grupo.aspx.designer.cs">
+      <DependentUpon>Grupo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
