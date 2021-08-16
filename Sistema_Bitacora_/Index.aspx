@@ -58,7 +58,7 @@
                 <div class="card-body">
                     <h5 class="card-title" style="font-weight:500;">Programas educativos</h5>
                     <p class="card-text">Operaciones CRUD en la tabla Programas Educativos</p>
-                    <a href="#" style="background-color:#212529" class="btn btn-dark btn-lg">Realizar operaciones</a>
+                    <a href="ProgramasEducativos.aspx" style="background-color:#212529" class="btn btn-dark btn-lg">Realizar operaciones</a>
                 </div>
                 
             </div> <%--Segunda Card--%>
@@ -72,7 +72,7 @@
                 <div class="card-body">
                     <h5 class="card-title" style="font-weight:500;">Cuatrimestre</h5>
                     <p class="card-text">Operaciones CRUD en la tabla Cuatrimestre</p>
-                    <a href="#" style="background-color:#212529" class="btn btn-dark btn-lg">Realizar operaciones</a>
+                    <a href="Cuatrimestre.aspx" style="background-color:#212529" class="btn btn-dark btn-lg">Realizar operaciones</a>
                 </div>
                 
             </div> <%--Tercera Card--%>

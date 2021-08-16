@@ -67,6 +67,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Cuatrimestre.aspx" />
+    <Content Include="EdicionCuatri.aspx" />
     <Content Include="Edicion_PE.aspx" />
     <Content Include="Editar_Carrera.aspx" />
     <Content Include="Index.aspx" />
@@ -76,6 +78,20 @@
     <Content Include="Carrera.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cuatrimestre.aspx.cs">
+      <DependentUpon>Cuatrimestre.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cuatrimestre.aspx.designer.cs">
+      <DependentUpon>Cuatrimestre.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EdicionCuatri.aspx.cs">
+      <DependentUpon>EdicionCuatri.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EdicionCuatri.aspx.designer.cs">
+      <DependentUpon>EdicionCuatri.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Edicion_PE.aspx.cs">
       <DependentUpon>Edicion_PE.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
