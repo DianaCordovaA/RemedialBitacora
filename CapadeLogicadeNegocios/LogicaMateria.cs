@@ -38,7 +38,7 @@ namespace ClassCapaLogicaNegocios
         public DataTable getMaterias(ref string msj_salida)
         {
 
-            string query = "select id_Materia as Codigo de Materia, NombeMateria as Nombre, HorasSemana as Horas_por_semana, Extra from Materia";
+            string query = "select id_Materia as Codigo, NombeMateria as Nombre, HorasSemana as Horas, Extra from Materia";
 
             DataSet ObtencionCarreras = null;
             DataTable Datos_salida = null;

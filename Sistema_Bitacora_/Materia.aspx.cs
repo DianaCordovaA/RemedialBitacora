@@ -14,11 +14,19 @@ namespace Sistema_Bitacora_
         LogicaMateria objMateria = null;
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Si es falso se está realizando la carga por primera vez
+           
             if (IsPostBack == false)
             {
                 objMateria = new LogicaMateria();
                 Session["objMateria"] = objMateria;
+
+                string msj = "";
+                GridView1.DataSource = objMateria.getMaterias(ref msj);
+                if (GridView1.DataSource != null)
+                {
+                    GridView1.DataBind();
+                }
+
 
             }
             else
@@ -27,5 +35,54 @@ namespace Sistema_Bitacora_
 
             }
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            EntidadMateria entidad = new EntidadMateria
+            {
+                NombreMateria = TextBox1.Text,
+                HorasSemana = Convert.ToByte(TextBox2.Text),
+                Extra = TextBox3.Text
+            };
+            string mensaje = "";
+            objMateria.InsertMateria(entidad, ref mensaje);
+            Response.Write("<script>alert('" + mensaje + "');</script>");
+           
+
+            TextBox1.Text = "";
+            TextBox2.Text = "";
+            TextBox3.Text = "";
+            string msj = "";
+            GridView1.DataSource = objMateria.getMaterias(ref msj);
+            if (GridView1.DataSource != null)
+            {
+                GridView1.DataBind();
+            }
+        }
+        protected void EliminarMateria(object sender, EventArgs e)
+        {
+            string msj = "";
+            string x = ((Button)sender).CommandArgument;
+            string id = x.ToString();
+            objMateria.DeleteMateria(id, ref msj);
+
+
+            GridView1.DataSource = objMateria.getMaterias(ref msj);
+            if (GridView1.DataSource != null)
+            {
+                GridView1.DataBind();
+            }
+        }
+        protected void EditarMateria(object sender, EventArgs e)
+        {
+            string x = ((Button)sender).CommandArgument;
+            Session["id_seleccionado"] = Convert.ToInt32(x);
+            Server.Transfer("Editar_Materias.aspx");
+
+        }
+
+
+
+
     }
 }

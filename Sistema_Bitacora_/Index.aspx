@@ -85,7 +85,7 @@
                 <div class="card-body">
                     <h5 class="card-title" style="font-weight:500;">Grupos</h5>
                     <p class="card-text">Operaciones CRUD en la tabla Grupos</p>
-                    <a href="#" style="background-color:#212529" class="btn btn-dark btn-lg">Realizar operaciones</a>
+                    <a href="Grupo.aspx" style="background-color:#212529" class="btn btn-dark btn-lg">Realizar operaciones</a>
                 </div>
                 
             </div> <%--Cuarta Card--%>
@@ -99,7 +99,7 @@
                 <div class="card-body">
                     <h5 class="card-title" style="font-weight:500;">Materias</h5>
                     <p class="card-text">Operaciones CRUD en la tabla Materias</p>
-                    <a href="#" style="background-color:#212529" class="btn btn-dark btn-lg">Realizar operaciones</a>
+                    <a href="Materia.aspx" style="background-color:#212529" class="btn btn-dark btn-lg">Realizar operaciones</a>
                 </div>
                 
             </div> <%--Quinta Card--%>
