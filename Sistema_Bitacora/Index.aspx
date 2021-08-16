@@ -6,13 +6,132 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,700;0,800;0,900;1,100;1,200;1,300;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Bitacora</title>
 </head>
+
 <body>
+    <style>
+        *{
+            font-family: 'Prompt', sans-serif;
+        }
+    </style>
+      
+    <nav class="navbar navbar-light bg-dark">
+      <div class="container-fluid d-flex justify-content-center">
+        <a class="navbar-brand" href="#" style="color: #ffff; font-size:20px; ">Bitácora de laboratorio</a>
+          
+      </div>
+        <div class="container-fluid d-flex justify-content-center">
+      <p style="color: #ffff; font-size:15px; ">Elaborado por Diana Cordova Aguilar</p>
+          
+      </div>
+        
+    </nav>
+
     <form id="form1" runat="server">
-        <div>
-        <h1>Hola Mundo!</h1>
+        
+        <div class="" style="margin-top: 25px;"> 
+
+            <div class="row">
+
+            <div class="col d-flex justify-content-center">
+                <div class="card text-center" style="width: 18rem;">
+                <div class="text-center">
+                <img src="./img/1.png" class="card-img-top" style="width:150px; " alt="...">
+                  </div>
+                <div class="card-body">
+                    <h5 class="card-title" style="font-weight:500;">Carreras</h5>
+                    <p class="card-text">Operaciones CRUD en la tabla Carreras</p>
+                    <a href="#" style="background-color:#212529" class="btn btn-dark btn-lg">Realizar operaciones</a>
+                </div>
+                
+            </div> <%--Primera Card--%>
+            </div> <%--Fin de primera col--%>
+
+
+            <div  class="col d-flex justify-content-center">
+                <div class="card text-center" style="width: 18rem;">
+                <div class="text-center">
+                <img src="./img/classroom.png" class="card-img-top" style="width:150px; " alt="...">
+                  </div>
+                <div class="card-body">
+                    <h5 class="card-title" style="font-weight:500;">Programas educativos</h5>
+                    <p class="card-text">Operaciones CRUD en la tabla Programas Educativos</p>
+                    <a href="#" style="background-color:#212529" class="btn btn-dark btn-lg">Realizar operaciones</a>
+                </div>
+                
+            </div> <%--Segunda Card--%>
+
+            </div>
+
+                <div  class="col d-flex justify-content-center">
+                <div class="card text-center" style="width: 18rem;">
+                <div class="text-center">
+                <img src="./img/pencil.png" class="card-img-top" style="width:150px; " alt="...">
+                  </div>
+                <div class="card-body">
+                    <h5 class="card-title" style="font-weight:500;">Cuatrimestre</h5>
+                    <p class="card-text">Operaciones CRUD en la tabla Cuatrimestre</p>
+                    <a href="#" style="background-color:#212529" class="btn btn-dark btn-lg">Realizar operaciones</a>
+                </div>
+                
+            </div> <%--Tercera Card--%>
+            </div>
+
+        <div class="col d-flex justify-content-center">
+                <div class="card text-center" style="width: 18rem;">
+                <div class="text-center">
+                <img src="./img/group.png" class="card-img-top" style="width:150px; " alt="...">
+                  </div>
+                <div class="card-body">
+                    <h5 class="card-title" style="font-weight:500;">Grupos</h5>
+                    <p class="card-text">Operaciones CRUD en la tabla Grupos</p>
+                    <a href="#" style="background-color:#212529" class="btn btn-dark btn-lg">Realizar operaciones</a>
+                </div>
+                
+            </div> <%--Cuarta Card--%>
+
+            </div>
+
+        <div class="col-md-3 mt-5" style="margin-left:17px; margin-bottom:20px;">
+                <div class="card text-center" style="width: 18rem;">
+                <div class="text-center">
+                <img src="./img/textbook.png" class="card-img-top" style="width:150px; " alt="...">
+                  </div>
+                <div class="card-body">
+                    <h5 class="card-title" style="font-weight:500;">Materias</h5>
+                    <p class="card-text">Operaciones CRUD en la tabla Materias</p>
+                    <a href="#" style="background-color:#212529" class="btn btn-dark btn-lg">Realizar operaciones</a>
+                </div>
+                
+            </div> <%--Quinta Card--%>
+
+            </div>
+
+                <div class="col-md-3  mt-5">
+                    <div class="card text-center" style="width: 18rem;">
+                        <div class="text-center">
+                            <img src="./img/elearning.png" class="card-img-top" style="width: 150px;" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title" style="font-weight: 500;">Grupo - Cuatrimestre</h5>
+                            <p class="card-text">Operaciones CRUD en la tabla Grupo - Cuatrimestre</p>
+                            <a href="#" style="background-color: #212529" class="btn btn-dark btn-lg">Realizar operaciones</a>
+                        </div>
+
+                    </div>
+                    <%--Sexta Card--%>
+                </div>
+
+
+            
+              
+
+             
+  
         </div>
     </form>
 
