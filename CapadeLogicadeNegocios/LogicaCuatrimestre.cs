@@ -251,6 +251,65 @@ namespace ClassCapaLogicaNegocios
             return mensajeSalida;
         }
 
+        public List<EntidadCuatrimestre> ListadoDeCuatrimestre(ref string msj_salida)
+        {
+            SqlConnection conexion = null;
+
+            string query = "select * from Cuatrimestre";
+            conexion = objectoDeAcceso.AbrirConexion(ref msj_salida);
+
+            SqlDataReader ObtenerDatos = null;
+
+            ObtenerDatos = objectoDeAcceso.ConsultarReader(query, conexion, ref msj_salida);
+
+            List<EntidadCuatrimestre> lista = new List<EntidadCuatrimestre>();
+
+
+            DateTime fechainicio;
+
+
+            DateTime fechasalida;
+
+            string inicio_;
+
+            string fin_;
+
+            if (ObtenerDatos != null)
+            {
+                while (ObtenerDatos.Read())
+                {
+                    fechainicio = (DateTime)ObtenerDatos[3];
+                    fechasalida = (DateTime)ObtenerDatos[4];
+
+                    inicio_ = fechainicio.ToString("dd-MM-yyyy");
+
+
+                    fin_ = fechasalida.ToString("dd-MM-yyyy");
+
+                    lista.Add(new EntidadCuatrimestre
+                    {
+                        id_cuatri = (short)ObtenerDatos[0],
+                        periodo = (string)ObtenerDatos[1],
+                        anio = (int)ObtenerDatos[2],
+                        inicio = inicio_,
+                        fin = fin_,
+                        extra = (string)ObtenerDatos[5]
+                    });
+                }
+            }
+            else
+            {
+                lista = null;
+            }
+            conexion.Close();
+            conexion.Dispose();
+
+            return lista;
+
+        }
+
+
+
     }
 
 }

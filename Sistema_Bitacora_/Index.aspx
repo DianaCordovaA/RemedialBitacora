@@ -113,7 +113,7 @@
                         <div class="card-body">
                             <h5 class="card-title" style="font-weight: 500;">Grupo - Cuatrimestre</h5>
                             <p class="card-text">Operaciones CRUD en la tabla Grupo - Cuatrimestre</p>
-                            <a href="#" style="background-color: #212529" class="btn btn-dark btn-lg">Realizar operaciones</a>
+                            <a href="GrupoCuatrimestre.aspx" style="background-color: #212529" class="btn btn-dark btn-lg">Realizar operaciones</a>
                         </div>
 
                     </div>

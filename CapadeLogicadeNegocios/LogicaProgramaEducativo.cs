@@ -193,5 +193,42 @@ namespace ClassCapaLogicaNegocios
             return lista;
 
         }
+
+        public List<EntidadProgramaEducativo> ListadoDeProgramas(ref string msj_salida)
+        {
+            SqlConnection conexion = null;
+
+            string query = "select * from ProgramaEducativo";
+            conexion = objectoDeAcceso.AbrirConexion(ref msj_salida);
+
+            SqlDataReader ObtenerDatos = null;
+
+            ObtenerDatos = objectoDeAcceso.ConsultarReader(query, conexion, ref msj_salida);
+
+            List<EntidadProgramaEducativo> lista = new List<EntidadProgramaEducativo>();
+
+
+            if (ObtenerDatos != null)
+            {
+                while (ObtenerDatos.Read())
+                {
+                    lista.Add(new EntidadProgramaEducativo
+                    {
+                        id_pe = (Byte)ObtenerDatos[0],
+                        ProgramaEd = (string)ObtenerDatos[1],
+                        Extra = (string)ObtenerDatos[3]
+                    });
+                }
+            }
+            else
+            {
+                lista = null;
+            }
+            conexion.Close();
+            conexion.Dispose();
+
+            return lista;
+
+        }
     }
 }

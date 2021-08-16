@@ -162,10 +162,48 @@ namespace ClassCapaLogicaNegocios
             };
 
 
+
             string sentencia = "update Grupo set Grado=@Grado, Letra=@Letra, Extra=@Extra where Id_grupo=@Id_grupo;";
 
             objectoDeAcceso.OperacionesSQLConParametros(sentencia, objectoDeAcceso.AbrirConexion(ref mensajeSalida), ref mensajeSalida, parametros);
             return mensajeSalida;
+        }
+
+        public List<EntidadGrupo> ListadoDeGrupo(ref string msj_salida)
+        {
+            SqlConnection conexion = null;
+
+            string query = "select * from Grupo;";
+            conexion = objectoDeAcceso.AbrirConexion(ref msj_salida);
+
+            SqlDataReader ObtenerDatos = null;
+
+            ObtenerDatos = objectoDeAcceso.ConsultarReader(query, conexion, ref msj_salida);
+
+            List<EntidadGrupo> lista = new List<EntidadGrupo>();
+
+
+            if (ObtenerDatos != null)
+            {
+                while (ObtenerDatos.Read())
+                {
+                    lista.Add(new EntidadGrupo
+                    {
+                        in_Grupo = (short)ObtenerDatos[0],
+                        grado = (Byte)ObtenerDatos[1],
+                        letra = (string)ObtenerDatos[2]
+                    });
+                }
+            }
+            else
+            {
+                lista = null;
+            }
+            conexion.Close();
+            conexion.Dispose();
+
+            return lista;
+
         }
     }
 }

@@ -13,6 +13,7 @@ namespace ClassCapaEntidades
         public short F_Grupo { set; get; }
         public short F_Cuatri { set; get; }
         public string Turno { set; get; }
+        public string Modalidad { set; get; }
         public string Extra { set; get; }
 
     }

@@ -3,3 +3,4 @@ E:\repos_visualstudio\Sistema_Bitacora\CapaDeAccesoADatos\bin\Debug\CapaDeAcceso
 E:\repos_visualstudio\Sistema_Bitacora\CapaDeAccesoADatos\obj\Debug\CapaDeAccesoADatos.csproj.CoreCompileInputs.cache
 E:\repos_visualstudio\Sistema_Bitacora\CapaDeAccesoADatos\obj\Debug\CapaDeAccesoADatos.dll
 E:\repos_visualstudio\Sistema_Bitacora\CapaDeAccesoADatos\obj\Debug\CapaDeAccesoADatos.pdb
+E:\repos_visualstudio\Sistema_Bitacora\CapaDeAccesoADatos\obj\Debug\CapaDeAccesoADatos.csproj.AssemblyReference.cache
