@@ -37,6 +37,15 @@ Sistema_Bitacora
  Devuelve el objeto de registro Asp.
  </summary>
 </member>
+<member name="F:Sistema_Bitacora.Materia._form1">
+<summary>
+control form1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:Sistema_Bitacora.WebForm1._form1">
 <summary>
 Control form1.

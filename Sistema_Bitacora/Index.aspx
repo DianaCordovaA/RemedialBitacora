@@ -40,7 +40,6 @@
             <div class="col d-flex justify-content-center">
                 <div class="card text-center" style="width: 18rem;">
                 <div class="text-center">
-                <img src="./img/1.png" class="card-img-top" style="width:150px; " alt="...">
                   </div>
                 <div class="card-body">
                     <h5 class="card-title" style="font-weight:500;">Carreras</h5>
@@ -55,7 +54,6 @@
             <div  class="col d-flex justify-content-center">
                 <div class="card text-center" style="width: 18rem;">
                 <div class="text-center">
-                <img src="./img/classroom.png" class="card-img-top" style="width:150px; " alt="...">
                   </div>
                 <div class="card-body">
                     <h5 class="card-title" style="font-weight:500;">Programas educativos</h5>
@@ -70,7 +68,6 @@
                 <div  class="col d-flex justify-content-center">
                 <div class="card text-center" style="width: 18rem;">
                 <div class="text-center">
-                <img src="./img/pencil.png" class="card-img-top" style="width:150px; " alt="...">
                   </div>
                 <div class="card-body">
                     <h5 class="card-title" style="font-weight:500;">Cuatrimestre</h5>
@@ -84,7 +81,6 @@
         <div class="col d-flex justify-content-center">
                 <div class="card text-center" style="width: 18rem;">
                 <div class="text-center">
-                <img src="./img/group.png" class="card-img-top" style="width:150px; " alt="...">
                   </div>
                 <div class="card-body">
                     <h5 class="card-title" style="font-weight:500;">Grupos</h5>
@@ -99,7 +95,6 @@
         <div class="col-md-3 mt-5" style="margin-left:17px; margin-bottom:20px;">
                 <div class="card text-center" style="width: 18rem;">
                 <div class="text-center">
-                <img src="./img/textbook.png" class="card-img-top" style="width:150px; " alt="...">
                   </div>
                 <div class="card-body">
                     <h5 class="card-title" style="font-weight:500;">Materias</h5>
@@ -114,7 +109,6 @@
                 <div class="col-md-3  mt-5">
                     <div class="card text-center" style="width: 18rem;">
                         <div class="text-center">
-                            <img src="./img/elearning.png" class="card-img-top" style="width: 150px;" alt="...">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title" style="font-weight: 500;">Grupo - Cuatrimestre</h5>

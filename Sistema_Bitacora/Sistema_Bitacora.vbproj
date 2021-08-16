@@ -99,10 +99,18 @@
     <Content Include="img\mortarboard.png" />
     <Content Include="img\pencil.png" />
     <Content Include="img\textbook.png" />
+    <Content Include="Materia.aspx" />
     <Content Include="Web.config" />
     <Content Include="Index.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Materia.aspx.designer.vb">
+      <DependentUpon>Materia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Materia.aspx.vb">
+      <DependentUpon>Materia.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

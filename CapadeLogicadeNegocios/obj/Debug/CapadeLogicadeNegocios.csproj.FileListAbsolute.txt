@@ -1,0 +1,11 @@
+E:\repos_visualstudio\Sistema_Bitacora\CapadeLogicadeNegocios\bin\Debug\CapadeLogicadeNegocios.dll
+E:\repos_visualstudio\Sistema_Bitacora\CapadeLogicadeNegocios\bin\Debug\CapadeLogicadeNegocios.pdb
+E:\repos_visualstudio\Sistema_Bitacora\CapadeLogicadeNegocios\bin\Debug\CapaDeAccesoADatos.dll
+E:\repos_visualstudio\Sistema_Bitacora\CapadeLogicadeNegocios\bin\Debug\CapadeEntidades.dll
+E:\repos_visualstudio\Sistema_Bitacora\CapadeLogicadeNegocios\bin\Debug\CapaDeAccesoADatos.pdb
+E:\repos_visualstudio\Sistema_Bitacora\CapadeLogicadeNegocios\bin\Debug\CapadeEntidades.pdb
+E:\repos_visualstudio\Sistema_Bitacora\CapadeLogicadeNegocios\obj\Debug\CapadeLogicadeNegocios.csproj.AssemblyReference.cache
+E:\repos_visualstudio\Sistema_Bitacora\CapadeLogicadeNegocios\obj\Debug\CapadeLogicadeNegocios.csproj.CoreCompileInputs.cache
+E:\repos_visualstudio\Sistema_Bitacora\CapadeLogicadeNegocios\obj\Debug\CapadeLogicadeNegocios.csproj.CopyComplete
+E:\repos_visualstudio\Sistema_Bitacora\CapadeLogicadeNegocios\obj\Debug\CapadeLogicadeNegocios.dll
+E:\repos_visualstudio\Sistema_Bitacora\CapadeLogicadeNegocios\obj\Debug\CapadeLogicadeNegocios.pdb
