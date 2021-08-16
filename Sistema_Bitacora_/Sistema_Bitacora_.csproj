@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Edicion_PE.aspx" />
     <Content Include="Editar_Carrera.aspx" />
     <Content Include="Index.aspx" />
     <Content Include="ProgramasEducativos.aspx" />
@@ -75,6 +76,13 @@
     <Content Include="Carrera.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Edicion_PE.aspx.cs">
+      <DependentUpon>Edicion_PE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Edicion_PE.aspx.designer.cs">
+      <DependentUpon>Edicion_PE.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Editar_Carrera.aspx.cs">
       <DependentUpon>Editar_Carrera.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

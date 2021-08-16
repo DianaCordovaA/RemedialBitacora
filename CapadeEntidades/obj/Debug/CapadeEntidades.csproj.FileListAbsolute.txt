@@ -3,4 +3,3 @@ E:\repos_visualstudio\Sistema_Bitacora\CapadeEntidades\bin\Debug\CapadeEntidades
 E:\repos_visualstudio\Sistema_Bitacora\CapadeEntidades\obj\Debug\CapadeEntidades.csproj.CoreCompileInputs.cache
 E:\repos_visualstudio\Sistema_Bitacora\CapadeEntidades\obj\Debug\CapadeEntidades.dll
 E:\repos_visualstudio\Sistema_Bitacora\CapadeEntidades\obj\Debug\CapadeEntidades.pdb
-E:\repos_visualstudio\Sistema_Bitacora\CapadeEntidades\obj\Debug\CapadeEntidades.csproj.AssemblyReference.cache

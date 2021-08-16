@@ -9,13 +9,13 @@ using ClassCapaLogicaNegocios;
 
 namespace Sistema_Bitacora_
 {
-    public partial class ProgramasEducativos : System.Web.UI.Page
+    public partial class Edicion_PE : System.Web.UI.Page
     {
         LogicaCarrera accesoCarrera = null;
+
         LogicaProgramaEducativo accesoPrograma = null;
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Si es falso se está realizando la carga por primera vez
             if (IsPostBack == false)
             {
                 accesoCarrera = new LogicaCarrera();
@@ -24,12 +24,7 @@ namespace Sistema_Bitacora_
                 accesoPrograma = new LogicaProgramaEducativo();
                 Session["accesoPrograma"] = accesoPrograma;
 
-                string msj = "";
-                GridView1.DataSource = accesoPrograma.ObtenerProgramasGrid(ref msj);
-                if (GridView1.DataSource != null)
-                {
-                    GridView1.DataBind();
-                }
+
             }
             else
             {
@@ -51,12 +46,28 @@ namespace Sistema_Bitacora_
                         DropDownList1.DataBind();
                     }
                 }
+
+                List<EntidadProgramaEducativo> mostrarPrograma = null;
+
+                string id = Convert.ToString(Session["id_seleccionado"]);
+                mostrarPrograma = accesoPrograma.ObtenerProgramaPorId(id, ref msj);
+                if (mostrarPrograma != null)
+                {
+                    foreach (EntidadProgramaEducativo programa in mostrarPrograma)
+                    {
+                        TextBox1.Text = programa.ProgramaEd;
+                        TextBox2.Text = programa.Extra;
+                    }
+                }
             }
 
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            string id = Session["id_seleccionado"].ToString();
+
+
             EntidadProgramaEducativo entidadPrograma = new EntidadProgramaEducativo
             {
                 ProgramaEd = TextBox1.Text,
@@ -68,36 +79,13 @@ namespace Sistema_Bitacora_
                 Session["id_Carrera"] = Convert.ToInt32(DropDownList1.SelectedValue);
             };
 
-            EntidadCarrera entidadCarrera = new EntidadCarrera
-            {
-                id_carrera = Convert.ToInt32(Session["id_Carrera"])
-            };
 
+            string idCarrera = Convert.ToString(DropDownList1.SelectedValue);
             string mensaje = "";
 
 
-            Boolean isSucces = accesoPrograma.InsertarProgramaEducativo(entidadPrograma, entidadCarrera, ref mensaje);
+            mensaje = accesoPrograma.EditarPrograma(id, entidadPrograma, idCarrera, ref mensaje);
             Server.Transfer("ProgramasEducativos.aspx");
-        }
-
-        public void EliminarPrograma(object sender, EventArgs e)
-        {
-            string msj = "";
-            string x = ((Button)sender).CommandArgument;
-            string id = x.ToString();
-            accesoPrograma.EliminarPrograma(id, ref msj);
-
-            GridView1.DataSource = accesoPrograma.ObtenerProgramasGrid(ref msj);
-            if (GridView1.DataSource != null)
-            {
-                GridView1.DataBind();
-            }
-        }
-        public void EditarPrograma(object sender, EventArgs e)
-        {
-            string x = ((Button)sender).CommandArgument;
-            Session["id_seleccionado"] = Convert.ToInt32(x);
-            Server.Transfer("Edicion_PE.aspx");
         }
     }
 }

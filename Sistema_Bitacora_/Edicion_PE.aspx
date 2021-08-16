@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ProgramasEducativos.aspx.cs" Inherits="Sistema_Bitacora_.ProgramasEducativos" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Edicion_PE.aspx.cs" Inherits="Sistema_Bitacora_.Edicion_PE" %>
 
 <!DOCTYPE html>
 
@@ -28,12 +28,12 @@
       <p style="color: #ffff; font-size:15px; ">Elaborado por Diana Cordova Aguilar</p>
           
       </div>
-        
-    </nav>
+        </nav>
+
     <form id="form1" runat="server">
         <div class="form-floating text-center">
        <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control mb-2" ></asp:TextBox>
-     <label for="TextBox1">Inserta el nombre del Programa Educativo:</label>   
+     <label for="TextBox1">Inserta el nuevo nombre del Programa Educativo:</label>   
          
 </div>
 
@@ -43,26 +43,9 @@
 </div>
         <div class="form-floating text-center" style="margin-bottom:80px;">
              <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control mb-2"></asp:TextBox>
-            <label for="TextBox2">Información extra:</label>
-       <asp:Button ID="Button1" runat="server" Text="Insertar Programa Educativo" CssClass="btn btn-dark btn-lg mt-3" OnClick="Button1_Click" />
+            <label for="TextBox2">Nueva información extra:</label>
+       <asp:Button ID="Button1" runat="server" Text="Actualizar nuevos datos" CssClass="btn btn-dark btn-lg mt-3" OnClick="Button1_Click" />
 </div>
-        <asp:GridView ID="GridView1" runat="server" CssClass="table table-dark table-striped">
-        
-                <Columns>
-                    
-                <asp:TemplateField HeaderText="Edición" SortExpression="[Id Especifico]"><ItemTemplate>
-                                                    <asp:Button cssClass="btn btn-outline-light m-2"  OnClick="EditarPrograma"  ID='LinkButton2' runat="server" Text="Editar registro" CommandArgument='<%# Bind("[Codigo]")%>' >  </asp:Button>
-                                
-                </ItemTemplate>
-                </asp:TemplateField>
-                <asp:TemplateField HeaderText="Eliminación" SortExpression="[Id Especifico]"><ItemTemplate>
-                                                    <asp:Button cssClass="btn btn-outline-danger m-2" OnClick="EliminarPrograma"  ID='LinkButton3' runat="server" Text="Eliminar registro" CommandArgument='<%# Bind("[Codigo]")%>' >  </asp:Button>
-                                
-                </ItemTemplate>
-                </asp:TemplateField>
-                </Columns> 
-        
-        </asp:GridView>
     </form>
 </body>
 </html>
