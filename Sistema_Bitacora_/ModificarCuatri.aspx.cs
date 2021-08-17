@@ -32,7 +32,7 @@ namespace Sistema_Bitacora_
                 List<EntidadCuatrimestre> mostrarCuatrimestre = null;
                 string msj = "";
                 string id = Convert.ToString(Session["id_seleccionado"]);
-                mostrarCuatrimestre = accessoCuatri.ObtenerCuatrimestrePorId(id, ref msj);
+                mostrarCuatrimestre = accessoCuatri.CuatriEspecifico(id, ref msj);
                 if (mostrarCuatrimestre != null)
                 {
                     foreach (EntidadCuatrimestre cuatrimestre in mostrarCuatrimestre)
@@ -59,7 +59,7 @@ namespace Sistema_Bitacora_
             };
             string msj = "";
             string id = Session["id_seleccionado"].ToString();
-            accessoCuatri.ModificarCuatriPorId(entidad, id, ref msj);
+            accessoCuatri.CambiarCuatrimestreId(entidad, id, ref msj);
             Response.Write("<script>alert('Información actualizada con éxito');</script>");
             Server.Transfer("Cuatrimestre.aspx");
         }

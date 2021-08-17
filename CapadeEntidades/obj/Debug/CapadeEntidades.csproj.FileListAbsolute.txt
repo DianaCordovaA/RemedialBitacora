@@ -4,3 +4,9 @@ E:\repos_visualstudio\Sistema_Bitacora\CapadeEntidades\obj\Debug\CapadeEntidades
 E:\repos_visualstudio\Sistema_Bitacora\CapadeEntidades\obj\Debug\CapadeEntidades.dll
 E:\repos_visualstudio\Sistema_Bitacora\CapadeEntidades\obj\Debug\CapadeEntidades.pdb
 E:\repos_visualstudio\Sistema_Bitacora\CapadeEntidades\obj\Debug\CapadeEntidades.csproj.AssemblyReference.cache
+C:\Users\Jorge\Desktop\REmedialBitacora\RemedialBitacora\CapadeEntidades\bin\Debug\CapadeEntidades.dll
+C:\Users\Jorge\Desktop\REmedialBitacora\RemedialBitacora\CapadeEntidades\bin\Debug\CapadeEntidades.pdb
+C:\Users\Jorge\Desktop\REmedialBitacora\RemedialBitacora\CapadeEntidades\obj\Debug\CapadeEntidades.csproj.AssemblyReference.cache
+C:\Users\Jorge\Desktop\REmedialBitacora\RemedialBitacora\CapadeEntidades\obj\Debug\CapadeEntidades.csproj.CoreCompileInputs.cache
+C:\Users\Jorge\Desktop\REmedialBitacora\RemedialBitacora\CapadeEntidades\obj\Debug\CapadeEntidades.dll
+C:\Users\Jorge\Desktop\REmedialBitacora\RemedialBitacora\CapadeEntidades\obj\Debug\CapadeEntidades.pdb

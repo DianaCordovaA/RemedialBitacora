@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaDeAccesoADatos", "CapaDeAccesoADatos\CapaDeAccesoADatos.csproj", "{10E66765-C805-4905-B9EE-DF4BA8A35815}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaAccesoDatos", "CapaDeAccesoADatos\CapaAccesoDatos.csproj", "{10E66765-C805-4905-B9EE-DF4BA8A35815}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapadeLogicadeNegocios", "CapadeLogicadeNegocios\CapadeLogicadeNegocios.csproj", "{7E0AA422-69AA-4564-B0E8-573F7583F0AB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaLogicaNegocios", "CapadeLogicadeNegocios\CapaLogicaNegocios.csproj", "{7E0AA422-69AA-4564-B0E8-573F7583F0AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapadeEntidades", "CapadeEntidades\CapadeEntidades.csproj", "{A22005C2-A4F2-4EFA-B83C-ABF54C198035}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaEntidades", "CapadeEntidades\CapaEntidades.csproj", "{A22005C2-A4F2-4EFA-B83C-ABF54C198035}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sistema_Bitacora_", "Sistema_Bitacora_\Sistema_Bitacora_.csproj", "{402B624C-D9F0-4FE7-B07E-17238022DECD}"
 EndProject

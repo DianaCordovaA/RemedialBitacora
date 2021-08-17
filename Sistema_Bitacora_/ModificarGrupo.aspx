@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Editar_Carrera.aspx.cs" Inherits="Sistema_Bitacora_.Editar_Carrera" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ModificarGrupo.aspx.cs" Inherits="Sistema_Bitacora_.Editar_Grupo" %>
 
 <!DOCTYPE html>
 
@@ -12,7 +12,8 @@
     <title>Bitacora</title>
 </head>
 <body>
-     <style>
+
+    <style>
         *{
             font-family: 'Prompt', sans-serif;
         }
@@ -30,10 +31,22 @@
         
     </nav>
     <form id="form1" runat="server">
-          <div class="form-floating text-center" style="margin-bottom:80px;">
-       <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" ></asp:TextBox>
-  <label for="TextBox1">Inserta el <span style="font-weight:bold;">nuevo</span> nombre de la carrera:</label>
-       <asp:Button ID="Button1" runat="server" Text="Insertar carrera" CssClass="btn btn-dark btn-lg mt-3" OnClick="Button1_Click" />
+        <div class="form-floating text-center">
+       <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control mb-3" MaxLength="1" ></asp:TextBox>
+  <label for="TextBox1">Inserte el grado de su grupo:</label>
+</div>
+
+               <div class="form-floating text-center">
+       <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control mb-3" MaxLength="1" ></asp:TextBox>
+  <label for="TextBox2">Inserte el letra de su grupo:</label>
+</div>
+
+        
+               <div class="form-floating text-center" style="margin-bottom: 80px;">
+       <asp:TextBox ID="TextBox3" runat="server" CssClass="form-control" ></asp:TextBox>
+  <label for="TextBox3">Ingrese información extra:</label>
+   <asp:Button ID="Button1" runat="server" Text="Actualizar información" CssClass="btn btn-dark btn-lg mt-3" OnClick="Button1_Click" />
+
 </div>
     </form>
 </body>

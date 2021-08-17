@@ -21,7 +21,7 @@ namespace Sistema_Bitacora_
                 Session["accesoCuatri"] = accesoCuatri;
 
                 string msj = "";
-                GridView1.DataSource = accesoCuatri.ObtenerCuatrimetresGrid(ref msj);
+                GridView1.DataSource = accesoCuatri.CuatrimestreGrid(ref msj);
                 if (GridView1.DataSource != null)
                 {
                     GridView1.DataBind();
@@ -46,7 +46,7 @@ namespace Sistema_Bitacora_
                 extra = TextBox5.Text
             };
             string mensaje = "";
-            Boolean isSuccess = accesoCuatri.InsertarNuevoCuatrimestre(entidad, ref mensaje);
+            Boolean isSuccess = accesoCuatri.AgregarCuatrimestre(entidad, ref mensaje);
 
             if (isSuccess == true)
             {
@@ -56,7 +56,7 @@ namespace Sistema_Bitacora_
             {
                 Response.Write("<script>alert('" + mensaje + "');</script>");
             }
-            GridView1.DataSource = accesoCuatri.ObtenerCuatrimetresGrid(ref mensaje);
+            GridView1.DataSource = accesoCuatri.CuatrimestreGrid(ref mensaje);
             if (GridView1.DataSource != null)
             {
                 GridView1.DataBind();
@@ -68,10 +68,10 @@ namespace Sistema_Bitacora_
             string msj = "";
             string x = ((Button)sender).CommandArgument;
             string id = x.ToString();
-            accesoCuatri.EliminarCuatri(id, ref msj);
+            accesoCuatri.BorrarCuatrimestre(id, ref msj);
 
 
-            GridView1.DataSource = accesoCuatri.ObtenerCuatrimetresGrid(ref msj);
+            GridView1.DataSource = accesoCuatri.CuatrimestreGrid(ref msj);
             if (GridView1.DataSource != null)
             {
                 GridView1.DataBind();
@@ -81,7 +81,7 @@ namespace Sistema_Bitacora_
         {
             string x = ((Button)sender).CommandArgument;
             Session["id_seleccionado"] = Convert.ToInt32(x);
-            Server.Transfer("EdicionCuatri.aspx");
+            Server.Transfer("ModificarCuatri.aspx");
         }
 
     }

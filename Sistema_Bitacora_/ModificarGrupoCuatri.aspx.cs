@@ -45,7 +45,7 @@ namespace Sistema_Bitacora_
                 List<EntidadGrupoCuatrimestre> grupoCuatrimestres = null;
                 string msj = "";
                 string id = Convert.ToString(Session["id_seleccionado"]);
-                grupoCuatrimestres = accesoGrupCuatri.ObtenerGrupoCuatrimestrePorId(id, ref msj);
+                grupoCuatrimestres = accesoGrupCuatri.MostrarGrupoCuatriEspecifico(id, ref msj);
                 if (grupoCuatrimestres != null)
                 {
                     foreach (EntidadGrupoCuatrimestre entidadGC in grupoCuatrimestres)
@@ -58,7 +58,7 @@ namespace Sistema_Bitacora_
 
                 List<EntidadProgramaEducativo> Programas = null;
 
-                Programas = accesoPrograma.ListadoDeProgramas(ref msj);
+                Programas = accesoPrograma.ListaProgramasE(ref msj);
                 if (Programas != null)
                 {
                     foreach (EntidadProgramaEducativo programa in Programas)
@@ -69,7 +69,7 @@ namespace Sistema_Bitacora_
                 }
 
                 List<EntidadGrupo> Grupos = null;
-                Grupos = accesoGrupo.ListadoDeGrupo(ref msj);
+                Grupos = accesoGrupo.ListaGrupos(ref msj);
                 if (Grupos != null)
                 {
                     foreach (EntidadGrupo grupo in Grupos)
@@ -80,7 +80,7 @@ namespace Sistema_Bitacora_
                 }
 
                 List<EntidadCuatrimestre> Cuatrimestre = null;
-                Cuatrimestre = accesoCuatri.ListadoDeCuatrimestre(ref msj);
+                Cuatrimestre = accesoCuatri.ListaCuatri(ref msj);
                 if (Cuatrimestre != null)
                 {
                     foreach (EntidadCuatrimestre cuatrimestre in Cuatrimestre)
@@ -107,7 +107,7 @@ namespace Sistema_Bitacora_
             };
             string msj = "";
             string id = Convert.ToString(Session["id_seleccionado"]);
-            accesoGrupCuatri.EdicionGrupoCuatri(entidad, id, ref msj);
+            accesoGrupCuatri.ModiGrupoCuatri(entidad, id, ref msj);
             Response.Write("<script>alert('Datos editados correctamente');</script>");
             Server.Transfer("GrupoCuatrimestre.aspx");
         }

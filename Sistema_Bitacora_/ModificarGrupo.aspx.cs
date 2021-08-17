@@ -32,7 +32,7 @@ namespace Sistema_Bitacora_
                 List<EntidadGrupo> mostrarGrupos = null;
                 string msj = "";
                 string id = Convert.ToString(Session["id_seleccionado"]);
-                mostrarGrupos = accesoGrupo.ObtenerGrupoPorID(id, ref msj);
+                mostrarGrupos = accesoGrupo.GrupoEspecifico(id, ref msj);
                 if (mostrarGrupos != null)
                 {
                     foreach (EntidadGrupo grupo in mostrarGrupos)
@@ -58,7 +58,7 @@ namespace Sistema_Bitacora_
                 extra = TextBox3.Text
             };
 
-            accesoGrupo.ModificarGrupoPorId(id, entidad, ref msj);
+            accesoGrupo.CambiarGruupoEspecifico(id, entidad, ref msj);
 
             Server.Transfer("Grupo.aspx");
         }

@@ -13,10 +13,10 @@ namespace ClassCapaLogicaNegocios
     public class LogicaCarrera
     {
         private ClassAccesoSQL objectoDeAcceso =
-         new ClassAccesoSQL("Data Source=ROMANISIDOR;Initial Catalog=Bitacora2021LabsUTP; Integrated Security=true");
+         new ClassAccesoSQL("Data Source=LAPTOP-26L6KOL2;Initial Catalog=Bitacora2021LabsUTP; Integrated Security=true");
 
        
-        public List<EntidadCarrera> ObtenerCarreras(ref string msj_salida)
+        public List<EntidadCarrera> MostrarCarreras(ref string msj_salida)
         {
             SqlConnection conexion = null;
 
@@ -55,7 +55,7 @@ namespace ClassCapaLogicaNegocios
 
         }
 
-        public List<EntidadCarrera> ObtenerCarreraPorID(string id,ref string msj_salida)
+        public List<EntidadCarrera> MostrarCarreraEspecifica(string id,ref string msj_salida)
         {
             SqlConnection conexion = null;
 
@@ -90,7 +90,7 @@ namespace ClassCapaLogicaNegocios
             return lista;
 
         }
-        public string ModificarCarreraPorId(string id, string Nuevonombre, ref string mensajeSalida)
+        public string CambiosIdCarrera(string id, string Nuevonombre, ref string mensajeSalida)
         {
             SqlParameter[] parametros = new SqlParameter[1];
             parametros[0] = new SqlParameter
@@ -110,7 +110,7 @@ namespace ClassCapaLogicaNegocios
         }
 
 
-        public DataTable ObtenerCarrerasGrid(ref string msj_salida)
+        public DataTable CarrerasGrid(ref string msj_salida)
         {
             
             string query = "select id_Carrera as Codigo, nombreCarrea as Nombre from Carrera;";
@@ -137,7 +137,7 @@ namespace ClassCapaLogicaNegocios
 
             return Datos_salida;
         }
-        public string EliminarCarrera(string id, ref string mensajeSalida)
+        public string BorrarCarrera(string id, ref string mensajeSalida)
         {
             SqlParameter[] parametros = new SqlParameter[1];
             parametros[0] = new SqlParameter
@@ -156,7 +156,7 @@ namespace ClassCapaLogicaNegocios
         }
 
 
-        public Boolean InsertarCarrera(EntidadCarrera entidadCarrera, ref string mensajeSalida)
+        public Boolean AgregarCarrera(EntidadCarrera entidadCarrera, ref string mensajeSalida)
         {
             SqlParameter[] parametros = new SqlParameter[1];
 

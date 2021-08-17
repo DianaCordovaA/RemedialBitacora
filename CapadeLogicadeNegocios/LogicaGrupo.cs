@@ -13,8 +13,8 @@ namespace ClassCapaLogicaNegocios
     public class LogicaGrupo
     {
         private ClassAccesoSQL objectoDeAcceso =
-         new ClassAccesoSQL("Data Source=ROMANISIDOR;Initial Catalog=Bitacora2021LabsUTP; Integrated Security=true");
-        public Boolean InsertarGrupo(EntidadGrupo entidadGrupo, ref string mensajeSalida)
+         new ClassAccesoSQL("Data Source=LAPTOP-26L6KOL2;Initial Catalog=Bitacora2021LabsUTP; Integrated Security=true");
+        public Boolean AgregarGrupo(EntidadGrupo entidadGrupo, ref string mensajeSalida)
         {
             SqlParameter[] parametros = new SqlParameter[3];
 
@@ -50,7 +50,7 @@ namespace ClassCapaLogicaNegocios
 
             return salida;
         }
-        public DataTable ObtenerGruposGrid(ref string msj_salida)
+        public DataTable GruposGrid(ref string msj_salida)
         {
 
             string query = "select Id_grupo as Codigo, Grado, Letra, extra as Extra from Grupo";
@@ -74,7 +74,7 @@ namespace ClassCapaLogicaNegocios
 
             return Datos_salida;
         }
-        public string EliminarGrupo(string id, ref string mensajeSalida)
+        public string BorrarGrupo(string id, ref string mensajeSalida)
         {
             SqlParameter[] parametros = new SqlParameter[1];
             parametros[0] = new SqlParameter
@@ -90,7 +90,7 @@ namespace ClassCapaLogicaNegocios
             objectoDeAcceso.OperacionesSQLConParametros(sentencia, objectoDeAcceso.AbrirConexion(ref mensajeSalida), ref mensajeSalida, parametros);
             return mensajeSalida;
         }
-        public List<EntidadGrupo> ObtenerGrupoPorID(string id, ref string msj_salida)
+        public List<EntidadGrupo> GrupoEspecifico(string id, ref string msj_salida)
         {
             SqlConnection conexion = null;
 
@@ -127,7 +127,7 @@ namespace ClassCapaLogicaNegocios
             return lista;
 
         }
-        public string ModificarGrupoPorId(string id, EntidadGrupo entidadGrupo, ref string mensajeSalida)
+        public string CambiarGruupoEspecifico(string id, EntidadGrupo entidadGrupo, ref string mensajeSalida)
         {
             SqlParameter[] parametros = new SqlParameter[4];
             parametros[0] = new SqlParameter
@@ -169,7 +169,7 @@ namespace ClassCapaLogicaNegocios
             return mensajeSalida;
         }
 
-        public List<EntidadGrupo> ListadoDeGrupo(ref string msj_salida)
+        public List<EntidadGrupo> ListaGrupos(ref string msj_salida)
         {
             SqlConnection conexion = null;
 

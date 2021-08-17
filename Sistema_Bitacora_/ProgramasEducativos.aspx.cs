@@ -25,7 +25,7 @@ namespace Sistema_Bitacora_
                 Session["accesoPrograma"] = accesoPrograma;
 
                 string msj = "";
-                GridView1.DataSource = accesoPrograma.ObtenerProgramasGrid(ref msj);
+                GridView1.DataSource = accesoPrograma.ProgramasGrid(ref msj);
                 if (GridView1.DataSource != null)
                 {
                     GridView1.DataBind();
@@ -42,7 +42,7 @@ namespace Sistema_Bitacora_
             {
                 List<EntidadCarrera> mostrarCarreras = null;
                 string msj = "";
-                mostrarCarreras = accesoCarrera.ObtenerCarreras(ref msj);
+                mostrarCarreras = accesoCarrera.MostrarCarreras(ref msj);
                 if (mostrarCarreras != null)
                 {
                     foreach (EntidadCarrera carrera in mostrarCarreras)
@@ -76,7 +76,7 @@ namespace Sistema_Bitacora_
             string mensaje = "";
 
 
-            Boolean isSucces = accesoPrograma.InsertarProgramaEducativo(entidadPrograma, entidadCarrera, ref mensaje);
+            Boolean isSucces = accesoPrograma.AgregarPrograma(entidadPrograma, entidadCarrera, ref mensaje);
             Server.Transfer("ProgramasEducativos.aspx");
         }
 
@@ -85,9 +85,9 @@ namespace Sistema_Bitacora_
             string msj = "";
             string x = ((Button)sender).CommandArgument;
             string id = x.ToString();
-            accesoPrograma.EliminarPrograma(id, ref msj);
+            accesoPrograma.BorrarPrograma(id, ref msj);
 
-            GridView1.DataSource = accesoPrograma.ObtenerProgramasGrid(ref msj);
+            GridView1.DataSource = accesoPrograma.ProgramasGrid(ref msj);
             if (GridView1.DataSource != null)
             {
                 GridView1.DataBind();
@@ -97,7 +97,7 @@ namespace Sistema_Bitacora_
         {
             string x = ((Button)sender).CommandArgument;
             Session["id_seleccionado"] = Convert.ToInt32(x);
-            Server.Transfer("Edicion_PE.aspx");
+            Server.Transfer("Modificar_ProE.aspx");
         }
     }
 }

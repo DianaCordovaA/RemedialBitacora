@@ -15,9 +15,9 @@ namespace ClassCapaLogicaNegocios
 
 
         private ClassAccesoSQL objectoDeAcceso =
-        new ClassAccesoSQL("Data Source=ROMANISIDOR;Initial Catalog=Bitacora2021LabsUTP; Integrated Security=true");
+        new ClassAccesoSQL("Data Source=LAPTOP-26L6KOL2;Initial Catalog=Bitacora2021LabsUTP; Integrated Security=true");
 
-        public string InsertarGrupoCuatrimestre(EntidadGrupoCuatrimestre entidadGrupoCuatri, ref string msj)
+        public string AgregarGrupoCuatri(EntidadGrupoCuatrimestre entidadGrupoCuatri, ref string msj)
         {
             SqlParameter[] parametros = new SqlParameter[6];
 
@@ -81,7 +81,7 @@ namespace ClassCapaLogicaNegocios
             return msj;
         }
 
-        public DataTable ObtenerGrupoCuatrimestreGrid(ref string msj_salida)
+        public DataTable GrupoCuatriGrid(ref string msj_salida)
         {
 
             string query = "Select GP.Id_GruCuat as Codigo,PE.ProgramaEd, G.Grado , G.Letra as Grupo, C.Periodo , GP.Turno, GP.Modalidad , GP.Extra From GrupoCuatrimestre as GP inner join ProgramaEducativo as PE on PE.Id_pe= Gp.F_ProgEd inner join Grupo as G on G.Id_grupo = GP.F_Grupo inner join Cuatrimestre as C on C.id_Cuatrimestre = Gp.F_Cuatri;";
@@ -105,7 +105,7 @@ namespace ClassCapaLogicaNegocios
             return Datos_salida;
         }
 
-        public string EliminarGrupoCuatrimestre(string id, ref string mensajeSalida)
+        public string BorrarGrupoCuatri(string id, ref string mensajeSalida)
         {
             SqlParameter[] parametros = new SqlParameter[1];
             parametros[0] = new SqlParameter
@@ -121,7 +121,7 @@ namespace ClassCapaLogicaNegocios
             objectoDeAcceso.OperacionesSQLConParametros(sentencia, objectoDeAcceso.AbrirConexion(ref mensajeSalida), ref mensajeSalida, parametros);
             return mensajeSalida;
         }
-        public List<EntidadGrupoCuatrimestre> ObtenerGrupoCuatrimestrePorId(string id, ref string msj_salida)
+        public List<EntidadGrupoCuatrimestre> MostrarGrupoCuatriEspecifico(string id, ref string msj_salida)
         {
             SqlConnection conexion = null;
 
@@ -158,7 +158,7 @@ namespace ClassCapaLogicaNegocios
 
         }
 
-        public string EdicionGrupoCuatri(EntidadGrupoCuatrimestre entidadGrupoCuatri, string id, ref string msj)
+        public string ModiGrupoCuatri(EntidadGrupoCuatrimestre entidadGrupoCuatri, string id, ref string msj)
         {
             SqlParameter[] parametros = new SqlParameter[6];
 

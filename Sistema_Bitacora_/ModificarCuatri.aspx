@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EdicionCuatri.aspx.cs" Inherits="Sistema_Bitacora_.EdicionCuatri" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ModificarCuatri.aspx.cs" Inherits="Sistema_Bitacora_.EdicionCuatri" %>
 
 <!DOCTYPE html>
 

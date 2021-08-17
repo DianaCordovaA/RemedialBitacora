@@ -37,7 +37,7 @@ namespace Sistema_Bitacora_
             {
                 List<EntidadCarrera> mostrarCarreras = null;
                 string msj = "";
-                mostrarCarreras = accesoCarrera.ObtenerCarreras(ref msj);
+                mostrarCarreras = accesoCarrera.MostrarCarreras(ref msj);
                 if (mostrarCarreras != null)
                 {
                     foreach (EntidadCarrera carrera in mostrarCarreras)
@@ -50,7 +50,7 @@ namespace Sistema_Bitacora_
                 List<EntidadProgramaEducativo> mostrarPrograma = null;
 
                 string id = Convert.ToString(Session["id_seleccionado"]);
-                mostrarPrograma = accesoPrograma.ObtenerProgramaPorId(id, ref msj);
+                mostrarPrograma = accesoPrograma.MostrarProgramaEspecifico(id, ref msj);
                 if (mostrarPrograma != null)
                 {
                     foreach (EntidadProgramaEducativo programa in mostrarPrograma)
@@ -84,7 +84,7 @@ namespace Sistema_Bitacora_
             string mensaje = "";
 
 
-            mensaje = accesoPrograma.EditarPrograma(id, entidadPrograma, idCarrera, ref mensaje);
+            mensaje = accesoPrograma.CambiarPrograma(id, entidadPrograma, idCarrera, ref mensaje);
             Server.Transfer("ProgramasEducativos.aspx");
         }
     }

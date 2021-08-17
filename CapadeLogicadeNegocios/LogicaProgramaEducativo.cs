@@ -13,8 +13,8 @@ namespace ClassCapaLogicaNegocios
     public class LogicaProgramaEducativo
     {
         private ClassAccesoSQL objectoDeAcceso =
-       new ClassAccesoSQL("Data Source=ROMANISIDOR;Initial Catalog=Bitacora2021LabsUTP; Integrated Security=true");
-        public Boolean InsertarProgramaEducativo( EntidadProgramaEducativo entidadPrograma, EntidadCarrera entidadCarrera, ref string mensajeSalida)
+       new ClassAccesoSQL("Data Source=LAPTOP-26L6KOL2;Initial Catalog=Bitacora2021LabsUTP; Integrated Security=true");
+        public Boolean AgregarPrograma( EntidadProgramaEducativo entidadPrograma, EntidadCarrera entidadCarrera, ref string mensajeSalida)
         {
             SqlParameter[] parametros = new SqlParameter[3];
 
@@ -56,7 +56,7 @@ namespace ClassCapaLogicaNegocios
 
             return salida;
         }
-        public DataTable ObtenerProgramasGrid(ref string msj_salida)
+        public DataTable ProgramasGrid(ref string msj_salida)
         {
 
             string query = "select id_pe as Codigo,  nombreCarrea as Carrera, ProgramaEd as Programa, Extra from ProgramaEducativo inner join Carrera on id_Carrera=F_Carrera";
@@ -79,7 +79,7 @@ namespace ClassCapaLogicaNegocios
 
             return Datos_salida;
         }
-        public DataTable ObtenerProgramasGridPorId(int id ,ref string msj_salida)
+        public DataTable ProgramasGridEspecifico(int id ,ref string msj_salida)
         {
 
             string query = "select nombreCarrea as Carrera, ProgramaEd as Programa, Extra from ProgramaEducativo inner join Carrera on id_Carrera='" + id+"' and F_Carrera='"+id+"';";
@@ -102,7 +102,7 @@ namespace ClassCapaLogicaNegocios
 
             return Datos_salida;
         }
-        public string EliminarPrograma(string id, ref string mensajeSalida)
+        public string BorrarPrograma(string id, ref string mensajeSalida)
         {
             SqlParameter[] parametros = new SqlParameter[1];
             parametros[0] = new SqlParameter
@@ -119,7 +119,7 @@ namespace ClassCapaLogicaNegocios
             objectoDeAcceso.OperacionesSQLConParametros(sentencia, objectoDeAcceso.AbrirConexion(ref mensajeSalida), ref mensajeSalida, parametros);
             return mensajeSalida;
         }
-        public string EditarPrograma(string id, EntidadProgramaEducativo programaEducativo, string idCarrera, ref string mensajeSalida)
+        public string CambiarPrograma(string id, EntidadProgramaEducativo programaEducativo, string idCarrera, ref string mensajeSalida)
         {
             SqlParameter[] parametros = new SqlParameter[4];
             parametros[0] = new SqlParameter
@@ -158,7 +158,7 @@ namespace ClassCapaLogicaNegocios
             objectoDeAcceso.OperacionesSQLConParametros(sentencia, objectoDeAcceso.AbrirConexion(ref mensajeSalida), ref mensajeSalida, parametros);
             return mensajeSalida;
         }
-        public List<EntidadProgramaEducativo> ObtenerProgramaPorId(string id, ref string msj_salida)
+        public List<EntidadProgramaEducativo> MostrarProgramaEspecifico(string id, ref string msj_salida)
         {
             SqlConnection conexion = null;
 
@@ -194,7 +194,7 @@ namespace ClassCapaLogicaNegocios
 
         }
 
-        public List<EntidadProgramaEducativo> ListadoDeProgramas(ref string msj_salida)
+        public List<EntidadProgramaEducativo> ListaProgramasE(ref string msj_salida)
         {
             SqlConnection conexion = null;
 

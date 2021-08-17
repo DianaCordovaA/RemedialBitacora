@@ -22,7 +22,7 @@ namespace Sistema_Bitacora_
                 string msj = "";
 
                 //Carga de datos en el gridview
-                GridView1.DataSource = accesoGrupo.ObtenerGruposGrid(ref msj);
+                GridView1.DataSource = accesoGrupo.GruposGrid(ref msj);
                 if (GridView1.DataSource != null)
                 {
                     GridView1.DataBind();
@@ -46,7 +46,7 @@ namespace Sistema_Bitacora_
                 extra = TextBox3.Text
             };
             string mensaje = "";
-            Boolean isSuccess = accesoGrupo.InsertarGrupo(entidad, ref mensaje);
+            Boolean isSuccess = accesoGrupo.AgregarGrupo(entidad, ref mensaje);
             Response.Write("<script>alert('" + mensaje + "');</script>");
         }
 
@@ -55,10 +55,10 @@ namespace Sistema_Bitacora_
             string msj = "";
             string x = ((Button)sender).CommandArgument;
             string id = x.ToString();
-            accesoGrupo.EliminarGrupo(id, ref msj);
+            accesoGrupo.BorrarGrupo(id, ref msj);
             
 
-            GridView1.DataSource = accesoGrupo.ObtenerGruposGrid(ref msj);
+            GridView1.DataSource = accesoGrupo.GruposGrid(ref msj);
             if (GridView1.DataSource != null)
             {
                 GridView1.DataBind();
@@ -68,7 +68,7 @@ namespace Sistema_Bitacora_
         {
             string x = ((Button)sender).CommandArgument;
             Session["id_seleccionado"] = Convert.ToInt32(x);
-            Server.Transfer("Editar_Grupo.aspx");
+            Server.Transfer("ModificarGrupo.aspx");
 
         }
 

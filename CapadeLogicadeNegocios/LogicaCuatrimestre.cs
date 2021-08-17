@@ -13,10 +13,10 @@ namespace ClassCapaLogicaNegocios
     public class LogicaCuatrimestre
     {
         private ClassAccesoSQL objectoDeAcceso =
-         new ClassAccesoSQL("Data Source=ROMANISIDOR;Initial Catalog=Bitacora2021LabsUTP; Integrated Security=true");
+         new ClassAccesoSQL("Data Source=LAPTOP-26L6KOL2;Initial Catalog=Bitacora2021LabsUTP; Integrated Security=true");
 
 
-        public Boolean InsertarNuevoCuatrimestre(EntidadCuatrimestre entidadCuatri, ref string msj)
+        public Boolean AgregarCuatrimestre(EntidadCuatrimestre entidadCuatri, ref string msj)
         {
             SqlParameter[] parametros = new SqlParameter[5];
 
@@ -78,7 +78,7 @@ namespace ClassCapaLogicaNegocios
             return salida;
         }
 
-        public DataTable ObtenerCuatrimetresGrid(ref string msj_salida)
+        public DataTable CuatrimestreGrid(ref string msj_salida)
         {
 
             string query = "select id_Cuatrimestre as Codigo, Periodo, Anio as Año,  CONVERT(VARCHAR(10), Inicio, 103) as Inicio, CONVERT(VARCHAR(10), Fin, 103) as Fin, Extra from Cuatrimestre;";
@@ -107,7 +107,7 @@ namespace ClassCapaLogicaNegocios
         }
 
 
-        public string EliminarCuatri(string id, ref string mensajeSalida)
+        public string BorrarCuatrimestre(string id, ref string mensajeSalida)
         {
             SqlParameter[] parametros = new SqlParameter[1];
             parametros[0] = new SqlParameter
@@ -127,7 +127,7 @@ namespace ClassCapaLogicaNegocios
 
 
 
-        public List<EntidadCuatrimestre> ObtenerCuatrimestrePorId(string id, ref string msj_salida)
+        public List<EntidadCuatrimestre> CuatriEspecifico(string id, ref string msj_salida)
         {
             SqlConnection conexion = null;
 
@@ -186,7 +186,7 @@ namespace ClassCapaLogicaNegocios
             return lista;
 
         }
-        public string ModificarCuatriPorId(EntidadCuatrimestre entidadCuatri, string id, ref string mensajeSalida)
+        public string CambiarCuatrimestreId(EntidadCuatrimestre entidadCuatri, string id, ref string mensajeSalida)
         {
             SqlParameter[] parametros = new SqlParameter[6];
             parametros[0] = new SqlParameter
@@ -251,7 +251,7 @@ namespace ClassCapaLogicaNegocios
             return mensajeSalida;
         }
 
-        public List<EntidadCuatrimestre> ListadoDeCuatrimestre(ref string msj_salida)
+        public List<EntidadCuatrimestre> ListaCuatri(ref string msj_salida)
         {
             SqlConnection conexion = null;
 

@@ -21,7 +21,7 @@ namespace Sistema_Bitacora_
                 Session["objMateria"] = objMateria;
 
                 string msj = "";
-                GridView1.DataSource = objMateria.getMaterias(ref msj);
+                GridView1.DataSource = objMateria.MostrarMaterias(ref msj);
                 if (GridView1.DataSource != null)
                 {
                     GridView1.DataBind();
@@ -45,7 +45,7 @@ namespace Sistema_Bitacora_
                 Extra = TextBox3.Text
             };
             string mensaje = "";
-            objMateria.InsertMateria(entidad, ref mensaje);
+            objMateria.AgregarMateria(entidad, ref mensaje);
             Response.Write("<script>alert('" + mensaje + "');</script>");
            
 
@@ -53,7 +53,7 @@ namespace Sistema_Bitacora_
             TextBox2.Text = "";
             TextBox3.Text = "";
             string msj = "";
-            GridView1.DataSource = objMateria.getMaterias(ref msj);
+            GridView1.DataSource = objMateria.MostrarMaterias(ref msj);
             if (GridView1.DataSource != null)
             {
                 GridView1.DataBind();
@@ -64,10 +64,10 @@ namespace Sistema_Bitacora_
             string msj = "";
             string x = ((Button)sender).CommandArgument;
             string id = x.ToString();
-            objMateria.DeleteMateria(id, ref msj);
+            objMateria.BorrarMateria(id, ref msj);
 
 
-            GridView1.DataSource = objMateria.getMaterias(ref msj);
+            GridView1.DataSource = objMateria.MostrarMaterias(ref msj);
             if (GridView1.DataSource != null)
             {
                 GridView1.DataBind();
@@ -77,7 +77,7 @@ namespace Sistema_Bitacora_
         {
             string x = ((Button)sender).CommandArgument;
             Session["id_seleccionado"] = Convert.ToInt32(x);
-            Server.Transfer("Editar_Materias.aspx");
+            Server.Transfer("Materia.aspx");
 
         }
 

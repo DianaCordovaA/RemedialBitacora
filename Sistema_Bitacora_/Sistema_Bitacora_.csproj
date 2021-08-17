@@ -68,11 +68,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Cuatrimestre.aspx" />
-    <Content Include="EdicionCuatri.aspx" />
-    <Content Include="Edicion_PE.aspx" />
-    <Content Include="Editar_Carrera.aspx" />
-    <Content Include="Editar_Grupo.aspx" />
-    <Content Include="Editar_GrupoCuatri.aspx" />
+    <Content Include="ModificarCuatri.aspx" />
+    <Content Include="Modificar_ProE.aspx" />
+    <Content Include="ModificarCarrera.aspx" />
+    <Content Include="ModificarGrupo.aspx" />
+    <Content Include="ModificarGrupoCuatri.aspx" />
     <Content Include="Grupo.aspx" />
     <Content Include="GrupoCuatrimestre.aspx" />
     <Content Include="Index.aspx" />
@@ -89,40 +89,40 @@
     <Compile Include="Cuatrimestre.aspx.designer.cs">
       <DependentUpon>Cuatrimestre.aspx</DependentUpon>
     </Compile>
-    <Compile Include="EdicionCuatri.aspx.cs">
-      <DependentUpon>EdicionCuatri.aspx</DependentUpon>
+    <Compile Include="ModificarCuatri.aspx.cs">
+      <DependentUpon>ModificarCuatri.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="EdicionCuatri.aspx.designer.cs">
-      <DependentUpon>EdicionCuatri.aspx</DependentUpon>
+    <Compile Include="ModificarCuatri.aspx.designer.cs">
+      <DependentUpon>ModificarCuatri.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Edicion_PE.aspx.cs">
-      <DependentUpon>Edicion_PE.aspx</DependentUpon>
+    <Compile Include="Modificar_ProE.aspx.cs">
+      <DependentUpon>Modificar_ProE.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Edicion_PE.aspx.designer.cs">
-      <DependentUpon>Edicion_PE.aspx</DependentUpon>
+    <Compile Include="Modificar_ProE.aspx.designer.cs">
+      <DependentUpon>Modificar_ProE.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Editar_Carrera.aspx.cs">
-      <DependentUpon>Editar_Carrera.aspx</DependentUpon>
+    <Compile Include="ModificarCarrera.aspx.cs">
+      <DependentUpon>ModificarCarrera.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Editar_Carrera.aspx.designer.cs">
-      <DependentUpon>Editar_Carrera.aspx</DependentUpon>
+    <Compile Include="ModificarCarrera.aspx.designer.cs">
+      <DependentUpon>ModificarCarrera.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Editar_Grupo.aspx.cs">
-      <DependentUpon>Editar_Grupo.aspx</DependentUpon>
+    <Compile Include="ModificarGrupo.aspx.cs">
+      <DependentUpon>ModificarGrupo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Editar_Grupo.aspx.designer.cs">
-      <DependentUpon>Editar_Grupo.aspx</DependentUpon>
+    <Compile Include="ModificarGrupo.aspx.designer.cs">
+      <DependentUpon>ModificarGrupo.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Editar_GrupoCuatri.aspx.cs">
-      <DependentUpon>Editar_GrupoCuatri.aspx</DependentUpon>
+    <Compile Include="ModificarGrupoCuatri.aspx.cs">
+      <DependentUpon>ModificarGrupoCuatri.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Editar_GrupoCuatri.aspx.designer.cs">
-      <DependentUpon>Editar_GrupoCuatri.aspx</DependentUpon>
+    <Compile Include="ModificarGrupoCuatri.aspx.designer.cs">
+      <DependentUpon>ModificarGrupoCuatri.aspx</DependentUpon>
     </Compile>
     <Compile Include="Grupo.aspx.cs">
       <DependentUpon>Grupo.aspx</DependentUpon>
@@ -178,13 +178,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CapadeEntidades\CapadeEntidades.csproj">
+    <ProjectReference Include="..\CapadeEntidades\CapaEntidades.csproj">
       <Project>{a22005c2-a4f2-4efa-b83c-abf54c198035}</Project>
-      <Name>CapadeEntidades</Name>
+      <Name>CapaEntidades</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CapadeLogicadeNegocios\CapadeLogicadeNegocios.csproj">
+    <ProjectReference Include="..\CapadeLogicadeNegocios\CapaLogicaNegocios.csproj">
       <Project>{7e0aa422-69aa-4564-b0e8-573f7583f0ab}</Project>
-      <Name>CapadeLogicadeNegocios</Name>
+      <Name>CapaLogicaNegocios</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

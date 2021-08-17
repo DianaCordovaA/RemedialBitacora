@@ -19,7 +19,6 @@ namespace Sistema_Bitacora_
                 objCarrera = new LogicaCarrera();
                 Session["objCarrera"] = objCarrera;
 
-
             }
             else
             {
@@ -31,7 +30,7 @@ namespace Sistema_Bitacora_
                 List<EntidadCarrera> mostrarCarreras = null;
                 string msj = "";
                 string id = Convert.ToString(Session["id_seleccionado"]);
-                mostrarCarreras = objCarrera.ObtenerCarreraPorID(id, ref msj);
+                mostrarCarreras = objCarrera.MostrarCarreraEspecifica(id, ref msj);
                 if (mostrarCarreras != null)
                 {
                     foreach (EntidadCarrera carrera in mostrarCarreras)
@@ -47,7 +46,7 @@ namespace Sistema_Bitacora_
             string msj = "";
             string id = Session["id_seleccionado"].ToString();
             string nombreeditado = TextBox1.Text;
-            objCarrera.ModificarCarreraPorId(id, nombreeditado, ref msj);
+            objCarrera.CambiosIdCarrera(id, nombreeditado, ref msj);
             Response.Write("<script>alert('Registro actualizado');</script>");
             Server.Transfer("Carrera.aspx");
         }

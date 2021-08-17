@@ -4,3 +4,9 @@ E:\repos_visualstudio\Sistema_Bitacora\CapaDeAccesoADatos\obj\Debug\CapaDeAcceso
 E:\repos_visualstudio\Sistema_Bitacora\CapaDeAccesoADatos\obj\Debug\CapaDeAccesoADatos.dll
 E:\repos_visualstudio\Sistema_Bitacora\CapaDeAccesoADatos\obj\Debug\CapaDeAccesoADatos.pdb
 E:\repos_visualstudio\Sistema_Bitacora\CapaDeAccesoADatos\obj\Debug\CapaDeAccesoADatos.csproj.AssemblyReference.cache
+C:\Users\Jorge\Desktop\REmedialBitacora\RemedialBitacora\CapaDeAccesoADatos\bin\Debug\CapaDeAccesoADatos.dll
+C:\Users\Jorge\Desktop\REmedialBitacora\RemedialBitacora\CapaDeAccesoADatos\bin\Debug\CapaDeAccesoADatos.pdb
+C:\Users\Jorge\Desktop\REmedialBitacora\RemedialBitacora\CapaDeAccesoADatos\obj\Debug\CapaDeAccesoADatos.csproj.AssemblyReference.cache
+C:\Users\Jorge\Desktop\REmedialBitacora\RemedialBitacora\CapaDeAccesoADatos\obj\Debug\CapaDeAccesoADatos.csproj.CoreCompileInputs.cache
+C:\Users\Jorge\Desktop\REmedialBitacora\RemedialBitacora\CapaDeAccesoADatos\obj\Debug\CapaDeAccesoADatos.dll
+C:\Users\Jorge\Desktop\REmedialBitacora\RemedialBitacora\CapaDeAccesoADatos\obj\Debug\CapaDeAccesoADatos.pdb

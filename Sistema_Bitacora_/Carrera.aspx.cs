@@ -20,7 +20,7 @@ namespace Sistema_Bitacora_
                 Session["objAccesoCarrera"] = accesoCarrera;
 
                 string msj = "";
-                GridView1.DataSource = accesoCarrera.ObtenerCarrerasGrid(ref msj);
+                GridView1.DataSource = accesoCarrera.CarrerasGrid(ref msj);
                 if (GridView1.DataSource != null)
                 {
                     GridView1.DataBind();
@@ -40,13 +40,13 @@ namespace Sistema_Bitacora_
                 nombre = TextBox1.Text
             };
             string mensaje = "";
-            Boolean isSuccess = accesoCarrera.InsertarCarrera(entidad, ref mensaje);
+            Boolean isSuccess = accesoCarrera.AgregarCarrera(entidad, ref mensaje);
 
             if (isSuccess == true)
             {
                 Response.Write("<script>alert('"+mensaje+"');</script>");
             }
-            GridView1.DataSource = accesoCarrera.ObtenerCarrerasGrid(ref mensaje);
+            GridView1.DataSource = accesoCarrera.CarrerasGrid(ref mensaje);
             if (GridView1.DataSource != null)
             {
                 GridView1.DataBind();
@@ -58,10 +58,10 @@ namespace Sistema_Bitacora_
             string msj = "";
             string x = ((Button)sender).CommandArgument;
             string id = x.ToString();
-            accesoCarrera.EliminarCarrera(id, ref msj);
+            accesoCarrera.BorrarCarrera(id, ref msj);
 
 
-            GridView1.DataSource = accesoCarrera.ObtenerCarrerasGrid(ref msj);
+            GridView1.DataSource = accesoCarrera.CarrerasGrid(ref msj);
             if (GridView1.DataSource != null)
             {
                 GridView1.DataBind();
@@ -72,14 +72,14 @@ namespace Sistema_Bitacora_
         {
             string x = ((Button)sender).CommandArgument;
             Session["id_seleccionado"] = Convert.ToInt32(x);
-            Server.Transfer("Editar_Carrera.aspx");
+            Server.Transfer("ModificarCarrera.aspx");
         }
 
         public void VerProgramasEducativos(object sender, EventArgs e)
         {
             string x = ((Button)sender).CommandArgument;
             Session["id_seleccionado"] = Convert.ToInt32(x);
-            Server.Transfer("Programas_Carrera.aspx");
+            Server.Transfer("ProgramasEducativos.aspx");
         }
     }
 }

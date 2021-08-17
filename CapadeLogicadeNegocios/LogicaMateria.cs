@@ -13,11 +13,11 @@ namespace ClassCapaLogicaNegocios
     public class LogicaMateria
     {
         private ClassAccesoSQL objectoDeAcceso =
-         new ClassAccesoSQL("Data Source=ROMANISIDOR;Initial Catalog=Bitacora2021LabsUTP; Integrated Security=true");
+         new ClassAccesoSQL("Data Source=LAPTOP-26L6KOL2;Initial Catalog=Bitacora2021LabsUTP; Integrated Security=true");
 
         //Operaciones CRUD de la tabla Materia
 
-        public string UpdateMateriaById(string id, EntidadMateria entidad, ref string mensajeSalida)
+        public string ModificarMateriaEspecifica(string id, EntidadMateria entidad, ref string mensajeSalida)
         {
             SqlParameter[] parametros = new SqlParameter[1];
             parametros[0] = new SqlParameter
@@ -35,7 +35,7 @@ namespace ClassCapaLogicaNegocios
             return mensajeSalida;
         }
 
-        public DataTable getMaterias(ref string msj_salida)
+        public DataTable MostrarMaterias(ref string msj_salida)
         {
 
             string query = "select id_Materia as Codigo, NombeMateria as Nombre, HorasSemana as Horas, Extra from Materia";
@@ -61,7 +61,7 @@ namespace ClassCapaLogicaNegocios
 
 
 
-        public Boolean InsertMateria(EntidadMateria entidadMateria, ref string mensajeSalida)
+        public Boolean AgregarMateria(EntidadMateria entidadMateria, ref string mensajeSalida)
         {
             SqlParameter[] parametros = new SqlParameter[3];
 
@@ -99,7 +99,7 @@ namespace ClassCapaLogicaNegocios
         }
 
         
-        public string DeleteMateria(string id, ref string mensajeSalida)
+        public string BorrarMateria(string id, ref string mensajeSalida)
         {
             SqlParameter[] parametros = new SqlParameter[1];
             parametros[0] = new SqlParameter
@@ -117,7 +117,7 @@ namespace ClassCapaLogicaNegocios
             return mensajeSalida;
         }
 
-        public List<EntidadMateria> getMateriaById(string id, ref string msj_salida)
+        public List<EntidadMateria> MostrarMateriaEpecifica(string id, ref string msj_salida)
         {
             SqlConnection conexion = null;
 

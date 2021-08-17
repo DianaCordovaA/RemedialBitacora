@@ -50,13 +50,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CapaDeAccesoADatos\CapaDeAccesoADatos.csproj">
+    <ProjectReference Include="..\CapaDeAccesoADatos\CapaAccesoDatos.csproj">
       <Project>{10e66765-c805-4905-b9ee-df4ba8a35815}</Project>
-      <Name>CapaDeAccesoADatos</Name>
+      <Name>CapaAccesoDatos</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CapadeEntidades\CapadeEntidades.csproj">
+    <ProjectReference Include="..\CapadeEntidades\CapaEntidades.csproj">
       <Project>{a22005c2-a4f2-4efa-b83c-abf54c198035}</Project>
-      <Name>CapadeEntidades</Name>
+      <Name>CapaEntidades</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

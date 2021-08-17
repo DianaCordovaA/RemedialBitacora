@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Edicion_PE.aspx.cs" Inherits="Sistema_Bitacora_.Edicion_PE" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ModificarGrupoCuatri.aspx.cs" Inherits="Sistema_Bitacora_.Editar_GrupoCuatri" %>
 
 <!DOCTYPE html>
 
@@ -13,7 +13,7 @@
 </head>
 <body>
 
-    <style>
+       <style>
         *{
             font-family: 'Prompt', sans-serif;
         }
@@ -28,23 +28,43 @@
       <p style="color: #ffff; font-size:15px; ">Elaborado por Diana Cordova Aguilar</p>
           
       </div>
-        </nav>
+        
+    </nav>
 
     <form id="form1" runat="server">
-        <div class="form-floating text-center">
+          <div class="form-floating text-center">
        <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control mb-2" ></asp:TextBox>
-     <label for="TextBox1">Inserta el nuevo nombre del Programa Educativo:</label>   
+     <label for="TextBox1">Inserte el turno:</label>   
          
 </div>
 
+        <div class="form-floating text-center">
+             <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control mb-2"></asp:TextBox>
+            <label for="TextBox2">Inserte la modalidad requerida:</label>
+</div>
+
+        
+        <div class="form-floating text-center">
+             <asp:TextBox ID="TextBox3" runat="server" CssClass="form-control mb-2"></asp:TextBox>
+            <label for="TextBox3">Inserte la información extra:</label>
+</div>
+
+        
            <div class="form-floating text-center"> 
          <asp:DropDownList ID="DropDownList1" runat="server" CssClass="form-select mb-2"></asp:DropDownList>
-            <label for="DropDownList1">Carreras disponibles:</label>
+            <label for="DropDownList1">Programas educativos disponibles:</label>
 </div>
-        <div class="form-floating text-center" style="margin-bottom:80px;">
-             <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control mb-2"></asp:TextBox>
-            <label for="TextBox2">Nueva información extra:</label>
-       <asp:Button ID="Button1" runat="server" Text="Actualizar nuevos datos" CssClass="btn btn-dark btn-lg mt-3" OnClick="Button1_Click" />
+
+                   <div class="form-floating text-center"> 
+         <asp:DropDownList ID="DropDownList2" runat="server" CssClass="form-select mb-2"></asp:DropDownList>
+            <label for="DropDownList2">Grupos disponibles:</label>
+</div>
+
+                           <div class="form-floating text-center" style="margin-bottom:80px;"> 
+         <asp:DropDownList ID="DropDownList3" runat="server" CssClass="form-select mb-2"></asp:DropDownList>
+            <label for="DropDownList3">Cuatrimestres disponibles:</label>
+           <asp:Button ID="Button1" runat="server" Text="Actualizar datos" CssClass="btn btn-dark btn-lg mt-3" OnClick="Button1_Click" />
+
 </div>
     </form>
 </body>

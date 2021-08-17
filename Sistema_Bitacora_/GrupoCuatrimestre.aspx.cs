@@ -33,7 +33,7 @@ namespace Sistema_Bitacora_
                 Session["accesoCuatri"] = accesoCuatri;
 
                 string msj = "";
-                GridView1.DataSource = accesoGrupCuatri.ObtenerGrupoCuatrimestreGrid(ref msj);
+                GridView1.DataSource = accesoGrupCuatri.GrupoCuatriGrid(ref msj);
                 if (GridView1.DataSource != null)
                 {
                     GridView1.DataBind();
@@ -53,7 +53,7 @@ namespace Sistema_Bitacora_
 
                 List<EntidadProgramaEducativo> Programas = null;
                 string msj = "";
-                Programas = accesoPrograma.ListadoDeProgramas(ref msj);
+                Programas = accesoPrograma.ListaProgramasE(ref msj);
                 if (Programas != null)
                 {
                     foreach (EntidadProgramaEducativo programa in Programas)
@@ -64,7 +64,7 @@ namespace Sistema_Bitacora_
                 }
 
                 List<EntidadGrupo> Grupos = null;
-                Grupos = accesoGrupo.ListadoDeGrupo(ref msj);
+                Grupos = accesoGrupo.ListaGrupos(ref msj);
                 if (Grupos != null)
                 {
                     foreach (EntidadGrupo grupo in Grupos)
@@ -75,7 +75,7 @@ namespace Sistema_Bitacora_
                 }
 
                 List<EntidadCuatrimestre> Cuatrimestres = null;
-                Cuatrimestres = accesoCuatri.ListadoDeCuatrimestre(ref msj);
+                Cuatrimestres = accesoCuatri.ListaCuatri(ref msj);
                 if (Cuatrimestres != null)
                 {
                     foreach (EntidadCuatrimestre cuatrimestre in Cuatrimestres)
@@ -99,9 +99,9 @@ namespace Sistema_Bitacora_
                 Extra = TextBox3.Text
             };
             string msj = "";
-            accesoGrupCuatri.InsertarGrupoCuatrimestre(entidad, ref msj);
+            accesoGrupCuatri.AgregarGrupoCuatri(entidad, ref msj);
 
-            GridView1.DataSource = accesoGrupCuatri.ObtenerGrupoCuatrimestreGrid(ref msj);
+            GridView1.DataSource = accesoGrupCuatri.GrupoCuatriGrid(ref msj);
             if (GridView1.DataSource != null)
             {
                 GridView1.DataBind();
@@ -115,10 +115,10 @@ namespace Sistema_Bitacora_
             string msj = "";
             string x = ((Button)sender).CommandArgument;
             string id = x.ToString();
-            accesoGrupCuatri.EliminarGrupoCuatrimestre(id, ref msj);
+            accesoGrupCuatri.BorrarGrupoCuatri(id, ref msj);
 
 
-            GridView1.DataSource = accesoGrupCuatri.ObtenerGrupoCuatrimestreGrid(ref msj);
+            GridView1.DataSource = accesoGrupCuatri.GrupoCuatriGrid(ref msj);
             if (GridView1.DataSource != null)
             {
                 GridView1.DataBind();

@@ -9,3 +9,14 @@ E:\repos_visualstudio\Sistema_Bitacora\CapadeLogicadeNegocios\obj\Debug\CapadeLo
 E:\repos_visualstudio\Sistema_Bitacora\CapadeLogicadeNegocios\obj\Debug\CapadeLogicadeNegocios.csproj.CopyComplete
 E:\repos_visualstudio\Sistema_Bitacora\CapadeLogicadeNegocios\obj\Debug\CapadeLogicadeNegocios.dll
 E:\repos_visualstudio\Sistema_Bitacora\CapadeLogicadeNegocios\obj\Debug\CapadeLogicadeNegocios.pdb
+C:\Users\Jorge\Desktop\REmedialBitacora\RemedialBitacora\CapadeLogicadeNegocios\bin\Debug\CapadeLogicadeNegocios.dll
+C:\Users\Jorge\Desktop\REmedialBitacora\RemedialBitacora\CapadeLogicadeNegocios\bin\Debug\CapadeLogicadeNegocios.pdb
+C:\Users\Jorge\Desktop\REmedialBitacora\RemedialBitacora\CapadeLogicadeNegocios\bin\Debug\CapaDeAccesoADatos.dll
+C:\Users\Jorge\Desktop\REmedialBitacora\RemedialBitacora\CapadeLogicadeNegocios\bin\Debug\CapadeEntidades.dll
+C:\Users\Jorge\Desktop\REmedialBitacora\RemedialBitacora\CapadeLogicadeNegocios\bin\Debug\CapaDeAccesoADatos.pdb
+C:\Users\Jorge\Desktop\REmedialBitacora\RemedialBitacora\CapadeLogicadeNegocios\bin\Debug\CapadeEntidades.pdb
+C:\Users\Jorge\Desktop\REmedialBitacora\RemedialBitacora\CapadeLogicadeNegocios\obj\Debug\CapadeLogicadeNegocios.csproj.AssemblyReference.cache
+C:\Users\Jorge\Desktop\REmedialBitacora\RemedialBitacora\CapadeLogicadeNegocios\obj\Debug\CapadeLogicadeNegocios.csproj.CoreCompileInputs.cache
+C:\Users\Jorge\Desktop\REmedialBitacora\RemedialBitacora\CapadeLogicadeNegocios\obj\Debug\CapadeLogicadeNegocios.csproj.CopyComplete
+C:\Users\Jorge\Desktop\REmedialBitacora\RemedialBitacora\CapadeLogicadeNegocios\obj\Debug\CapadeLogicadeNegocios.dll
+C:\Users\Jorge\Desktop\REmedialBitacora\RemedialBitacora\CapadeLogicadeNegocios\obj\Debug\CapadeLogicadeNegocios.pdb
