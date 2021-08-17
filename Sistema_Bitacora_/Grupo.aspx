@@ -25,7 +25,7 @@
           
       </div>
         <div class="container-fluid d-flex justify-content-center">
-      <p style="color: #ffff; font-size:15px; ">Elaborado por Diana Cordova Aguilar</p>
+      <p style="color: #ffff; font-size:15px; ">Elaborado por Diana Cordova Aguila</p>
           
       </div>
         
@@ -44,11 +44,15 @@
 </div>
 
         
-               <div class="form-floating text-center" style="margin-bottom: 80px;">
+               <div class="form-floating text-center" >
        <asp:TextBox ID="TextBox3" runat="server" CssClass="form-control" ></asp:TextBox>
   <label for="TextBox3">Ingrese información extra:</label>
    <asp:Button ID="Button1" runat="server" Text="Insertar nuevo grupo" CssClass="btn btn-dark btn-lg mt-3" OnClick="Button1_Click" />
 
+</div>
+          <div class="form-floating text-center" style="margin-bottom:80px;">
+    
+       <a href="Index.aspx" class="btn btn-success btn-lg mt-4">Ir a Inicio</a>
 </div>
 
         <asp:GridView ID="GridView1" runat="server" CssClass="table table-dark table-striped">

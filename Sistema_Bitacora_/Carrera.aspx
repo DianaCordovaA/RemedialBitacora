@@ -33,10 +33,15 @@
 
 
     <form id="form1" runat="server">
-   <div class="form-floating text-center" style="margin-bottom:80px;">
-       <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" ></asp:TextBox>
+   <div class="form-floating text-center" >
+       <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control mb-2" ></asp:TextBox>
   <label for="TextBox1">Inserta el nombre de la carrera:</label>
        <asp:Button ID="Button1" runat="server" Text="Insertar carrera" CssClass="btn btn-dark btn-lg mt-3" OnClick="Button1_Click" />
+        
+</div>
+          <div class="form-floating text-center" style="margin-bottom:80px;">
+    
+       <a href="Index.aspx" class="btn btn-success btn-lg mt-4">Ir a Inicio</a>
 </div>
         <asp:GridView ID="GridView1" runat="server" CssClass="table table-dark table-striped">
             <Columns>
