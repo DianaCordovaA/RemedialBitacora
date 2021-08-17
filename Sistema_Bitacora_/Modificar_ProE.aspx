@@ -25,7 +25,7 @@
           
       </div>
         <div class="container-fluid d-flex justify-content-center">
-      <p style="color: #ffff; font-size:15px; ">Elaborado por Diana Cordova Aguilar</p>
+      <p style="color: #ffff; font-size:15px; ">Elaborado por Diana Cordova Aguila</p>
           
       </div>
         </nav>
